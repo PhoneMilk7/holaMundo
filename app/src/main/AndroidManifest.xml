@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".calculadora2"></activity>
+        <activity android:name=".link"></activity>
+        <activity android:name=".calculadora2" />
         <activity android:name=".calculadora" />
         <activity android:name=".MainActivity">
             <intent-filter>

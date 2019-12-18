@@ -8,12 +8,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class calculadora2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        int a = getIntent().getExtras().getInt("lecontador");
+        Toast.makeText(getApplicationContext(), "conta: "+a, Toast.LENGTH_SHORT).show();
         setContentView(R.layout.activity_calculadora2);
         final Button multi = findViewById(R.id.Multi);
         final Button suma = findViewById(R.id.Suma);

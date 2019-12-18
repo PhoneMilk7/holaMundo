@@ -6,8 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class calculadora extends AppCompatActivity {
+
     int dato1 = 0, dato2 = 0;
     float resultado;
     boolean dato01=false,dato02=false;
@@ -16,7 +18,6 @@ public class calculadora extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculadora);
-
         Button btn_0 = findViewById(R.id.btn_0);
         Button btn_1 = findViewById(R.id.btn_1);
         Button btn_2 = findViewById(R.id.btn_2);
@@ -109,7 +110,7 @@ public class calculadora extends AppCompatActivity {
         btn_Dividir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!dato01){
+                if(!dato01&&!resul.toString().isEmpty()){
                     dato1 = Integer.parseInt(resul.getText().toString());
                     operacion = 1;
                     dato01 = true;
@@ -120,9 +121,9 @@ public class calculadora extends AppCompatActivity {
         btn_Multiplicar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!dato01){
+                if(!dato01&&!resul.toString().isEmpty()){
                     dato1 = Integer.parseInt(resul.getText().toString());
-                    operacion = 3;
+                    operacion = 2;
                     dato01 = true;
                 }
             }
@@ -131,9 +132,9 @@ public class calculadora extends AppCompatActivity {
         btn_Sumar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!dato01){
+                if(!dato01&&!resul.toString().isEmpty()){
                     dato1 = Integer.parseInt(resul.getText().toString());
-                    operacion = 2;
+                    operacion = 3;
                     dato01 = true;
                 }
             }
@@ -142,7 +143,7 @@ public class calculadora extends AppCompatActivity {
         btn_Restar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!dato01){
+                if(!dato01&&!resul.toString().isEmpty()){
                     dato1 = Integer.parseInt(resul.getText().toString());
                     operacion = 4;
                     dato01 = true;
@@ -152,9 +153,15 @@ public class calculadora extends AppCompatActivity {
         btn_Igual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!dato01) {
+                if(!resul.toString().isEmpty()) {
                     dato1 = Integer.parseInt(resul.getText().toString());
                 }
+            }
+        });
+        btn_C.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
     }

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         final Button igualar = findViewById(R.id.igualar);
         final Button cal = findViewById(R.id.cal);
         final Button cal2 = findViewById(R.id.cal2);
+        final Button L = findViewById(R.id.link);
         final TextView text = findViewById(R.id.elTexto);
         final EditText text1 = findViewById(R.id.text1);
         final TextView text2 = findViewById(R.id.text2);
@@ -78,6 +80,13 @@ public class MainActivity extends AppCompatActivity {
                 calculadora2();
             }
         });
+        L.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               link();
+            }
+        });
+
     }
 
     private void calculadora1(){
@@ -86,8 +95,14 @@ public class MainActivity extends AppCompatActivity {
     }
     private void calculadora2(){
         final Intent calcu2 = new Intent(this, calculadora2.class);
+        calcu2.putExtra("lecontador",a);
         startActivity(calcu2);
     }
+    private void link(){
+        Intent Link = new Intent(this, link.class);
+        startActivity(Link);
+    }
+
     @Override
     protected void onStart() {
         super.onStart();

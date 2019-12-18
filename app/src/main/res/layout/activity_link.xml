@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".link">
+
+    <Button
+        android:id="@+id/fb"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="FaceBook"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Llamar_papa"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Llamar a papa"
+        app:layout_constraintEnd_toEndOf="@+id/fb"
+        app:layout_constraintStart_toStartOf="@+id/fb"
+        app:layout_constraintTop_toBottomOf="@+id/fb" />
+
+    <Button
+        android:id="@+id/Camara"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Camara"
+        app:layout_constraintEnd_toEndOf="@+id/Llamar_papa"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Llamar_papa" />
+</androidx.constraintlayout.widget.ConstraintLayout>
