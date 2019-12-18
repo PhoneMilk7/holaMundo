@@ -13,7 +13,7 @@
         android:layout_marginTop="192dp"
         android:textColor="#F00808"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_Dividir"
+        app:layout_constraintEnd_toEndOf="@+id/btn_9"
         app:layout_constraintHorizontal_bias="0.806"
         app:layout_constraintStart_toEndOf="@+id/btn_7"
         app:layout_constraintStart_toStartOf="@+id/btn_7"
@@ -22,11 +22,12 @@
 
     <Button
         android:id="@+id/btn_Dividir"
-        android:layout_width="88dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="/"
         android:textColor="#0027FA"
         app:layout_constraintEnd_toEndOf="@+id/btn_Multiplicar"
+        app:layout_constraintStart_toEndOf="@+id/btn_9"
         app:layout_constraintTop_toTopOf="@+id/btn_C" />
 
     <Button
@@ -79,18 +80,18 @@
 
     <Button
         android:id="@+id/btn_Restar"
-        android:layout_width="88dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="--"
         android:textColor="#0129FC"
-        app:layout_constraintEnd_toEndOf="@+id/btn_Sumar"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/btn_6"
         app:layout_constraintTop_toBottomOf="@+id/btn_Multiplicar" />
 
     <Button
         android:id="@+id/btn_Multiplicar"
-        android:layout_width="88dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="X"
         android:textColor="#002CFF"
@@ -103,8 +104,6 @@
         android:id="@+id/btn_MasMenos"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
         android:text="+/-"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_1" />
@@ -137,11 +136,12 @@
 
     <Button
         android:id="@+id/btn_Sumar"
-        android:layout_width="88dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="+"
         android:textColor="#0025FF"
         app:layout_constraintBottom_toTopOf="@+id/btn_Igual"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_3"
         app:layout_constraintTop_toBottomOf="@+id/btn_Restar" />
 
