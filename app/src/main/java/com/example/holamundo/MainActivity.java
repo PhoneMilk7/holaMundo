@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        a = getIntent().getIntExtra("lecontado", a);
+        Toast.makeText(getApplicationContext(), "conta: "+a, Toast.LENGTH_SHORT).show();
         final Button myboton = findViewById(R.id.button);
         final Button igualar = findViewById(R.id.igualar);
         final Button cal = findViewById(R.id.cal);
@@ -95,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(calcu);
     }
     private void calculadora2(){
-        final Intent calcu2 = new Intent(this, calculadora2.class);
+        final Intent calcu2 = new Intent(MainActivity.this, calculadora2.class);
         calcu2.putExtra("lecontador",a);
         startActivity(calcu2);
     }
