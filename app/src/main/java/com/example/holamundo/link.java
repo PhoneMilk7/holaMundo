@@ -37,7 +37,7 @@ public class link extends AppCompatActivity {
         FB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri webpage = Uri.parse("http://www.fb.com");
+                Uri webpage = Uri.parse("http://www.facebook.com");
                 Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
                 startActivity(webIntent);
             }
